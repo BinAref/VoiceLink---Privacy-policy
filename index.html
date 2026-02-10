@@ -3,184 +3,533 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceLink - Privacy Policy</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%234285f4' d='M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z'/><path fill='%234285f4' d='M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z'/></svg>">
+    <title>VoiceLink - Privacy Policy | سياسة الخصوصية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        h1 {
+            color: #f1f5f9;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.1em;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .lang-btn {
+            padding: 12px 30px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            background: rgba(59, 130, 246, 0.1);
+            color: #94a3b8;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border-color: #3b82f6;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Content */
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #3b82f6;
+            font-size: 1.8em;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.2);
+        }
+
+        h3 {
+            color: #60a5fa;
+            font-size: 1.3em;
+            margin: 30px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .info-box {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 4px solid #22c55e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        strong {
+            color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(59, 130, 246, 0.2);
+            color: #94a3b8;
+        }
+
+        .date {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] ul,
+        [dir="rtl"] ol {
+            margin: 15px 30px 15px 0;
+        }
+
+        [dir="rtl"] li {
+            padding-right: 10px;
+            padding-left: 0;
+        }
+
+        [dir="rtl"] .highlight-box,
+        [dir="rtl"] .warning-box,
+        [dir="rtl"] .info-box {
+            border-left: none;
+            border-right: 4px solid;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .lang-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="logo">
-                    <svg class="app-icon" viewBox="0 0 24 24">
-                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-                        <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-                    </svg>
-                    <h1 data-key="app-name">VoiceLink</h1>
-                </div>
-                <div class="controls">
-                    <select id="language-selector" class="language-selector">
-                        <option value="en">English</option>
-                        <option value="ar">العربية</option>
-                        <option value="tr">Türkçe</option>
-                    </select>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                        <svg class="sun-icon" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="5"/>
-                            <line x1="12" y1="1" x2="12" y2="3"/>
-                            <line x1="12" y1="21" x2="12" y2="23"/>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                            <line x1="1" y1="12" x2="3" y2="12"/>
-                            <line x1="21" y1="12" x2="23" y2="12"/>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                        </svg>
-                        <svg class="moon-icon" viewBox="0 0 24 24">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </header>
+        <div class="header">
+            <div class="logo">📡</div>
+            <h1>VoiceLink</h1>
+            <p class="subtitle">Offline Walkie Talkie</p>
+        </div>
 
-        <main class="content">
-            <div class="privacy-header">
-                <h2 data-key="privacy-policy-title">Privacy Policy</h2>
-                <p class="last-updated" data-key="last-updated">Last updated: January 12, 2026</p>
+        <div class="language-toggle">
+            <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+            <button class="lang-btn" onclick="switchLanguage('ar')">العربية</button>
+        </div>
+
+        <!-- English Content -->
+        <div id="content-en" class="content active">
+            <h2>Privacy Policy</h2>
+            <p class="date">Last Updated: January 2026</p>
+
+            <div class="highlight-box">
+                <p><strong>Important:</strong> VoiceLink is designed with privacy in mind. All voice and text communications stay on your local WiFi network and are never transmitted over the internet.</p>
             </div>
 
-            <div class="privacy-content">
-                <section class="intro">
-                    <p data-key="intro-text">This Privacy Policy describes how VoiceLink ("we", "our", or "us") collects, uses, and protects your information when you use our mobile application.</p>
-                </section>
+            <h2>1. Information We Collect</h2>
+            
+            <h3>1.1 Information Collected for Activation (One-Time Only)</h3>
+            <p>When you activate the app for the first time, we collect:</p>
+            <ul>
+                <li><strong>Device ID:</strong> A unique identifier for your device</li>
+                <li><strong>Phone Model:</strong> Your device model and manufacturer</li>
+                <li><strong>Android Version:</strong> Your operating system version</li>
+                <li><strong>Activation Code:</strong> The purchased activation code</li>
+            </ul>
+            <p><strong>Purpose:</strong> This information is used solely to verify your activation and prevent unauthorized use.</p>
 
-                <section class="section">
-                    <h3 data-key="information-collection-title">Information We Collect</h3>
-                    <div class="subsection">
-                        <h4 data-key="personal-info-title">Personal Information</h4>
-                        <ul>
-                            <li data-key="personal-info-1">Device identifiers for connection purposes</li>
-                            <li data-key="personal-info-2">Network information for device discovery</li>
-                            <li data-key="personal-info-3">Audio recordings (stored locally only)</li>
-                            <li data-key="personal-info-4">Text messages (stored locally only)</li>
-                        </ul>
-                    </div>
-                    <div class="subsection">
-                        <h4 data-key="technical-info-title">Technical Information</h4>
-                        <ul>
-                            <li data-key="technical-info-1">Device model and operating system version</li>
-                            <li data-key="technical-info-2">App version and usage statistics</li>
-                            <li data-key="technical-info-3">Network connectivity status</li>
-                        </ul>
-                    </div>
-                </section>
+            <h3>1.2 Information NOT Collected</h3>
+            <p>We do NOT collect:</p>
+            <ul>
+                <li>❌ Voice messages or recordings</li>
+                <li>❌ Text messages or chat history</li>
+                <li>❌ Contact information</li>
+                <li>❌ Location data</li>
+                <li>❌ Personal information (name, email, phone number)</li>
+                <li>❌ Usage patterns or analytics</li>
+                <li>❌ Any data from your local network communications</li>
+            </ul>
 
-                <section class="section">
-                    <h3 data-key="data-usage-title">How We Use Your Information</h3>
-                    <ul>
-                        <li data-key="data-usage-1">Enable voice and text communication between devices</li>
-                        <li data-key="data-usage-2">Maintain connection stability and quality</li>
-                        <li data-key="data-usage-3">Provide technical support and troubleshooting</li>
-                        <li data-key="data-usage-4">Improve app performance and user experience</li>
-                    </ul>
-                </section>
+            <h2>2. How We Use Your Information</h2>
+            <p>The limited information we collect is used only for:</p>
+            <ol>
+                <li><strong>Activation Verification:</strong> To confirm your device is properly activated</li>
+                <li><strong>License Management:</strong> To prevent multiple activations with the same code</li>
+                <li><strong>Technical Support:</strong> To assist you if you encounter activation issues</li>
+            </ol>
 
-                <section class="section">
-                    <h3 data-key="data-storage-title">Data Storage and Security</h3>
-                    <div class="highlight-box">
-                        <h4 data-key="local-storage-title">Local Storage Only</h4>
-                        <p data-key="local-storage-desc">All your messages, voice recordings, and personal data are stored locally on your device. We do not upload, store, or access your personal communications on external servers.</p>
-                    </div>
-                    <ul>
-                        <li data-key="security-1">End-to-end encryption for all communications</li>
-                        <li data-key="security-2">No cloud storage of personal data</li>
-                        <li data-key="security-3">Secure local database with encryption</li>
-                        <li data-key="security-4">Regular security updates and patches</li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <h3 data-key="data-sharing-title">Data Sharing</h3>
-                    <div class="highlight-box">
-                        <h4 data-key="no-sharing-title">We Do Not Share Your Data</h4>
-                        <p data-key="no-sharing-desc">VoiceLink does not sell, trade, or share your personal information with third parties. Your communications remain private between connected devices.</p>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h3 data-key="permissions-title">App Permissions</h3>
-                    <div class="permissions-grid">
-                        <div class="permission-item">
-                            <div class="permission-icon">🎤</div>
-                            <div>
-                                <h4 data-key="microphone-title">Microphone</h4>
-                                <p data-key="microphone-desc">Required for voice recording and communication</p>
-                            </div>
-                        </div>
-                        <div class="permission-item">
-                            <div class="permission-icon">🌐</div>
-                            <div>
-                                <h4 data-key="network-title">Network Access</h4>
-                                <p data-key="network-desc">Enables device discovery and communication</p>
-                            </div>
-                        </div>
-                        <div class="permission-item">
-                            <div class="permission-icon">💾</div>
-                            <div>
-                                <h4 data-key="storage-title">Storage</h4>
-                                <p data-key="storage-desc">Stores messages and settings locally</p>
-                            </div>
-                        </div>
-                        <div class="permission-item">
-                            <div class="permission-icon">🔔</div>
-                            <div>
-                                <h4 data-key="notifications-title">Notifications</h4>
-                                <p data-key="notifications-desc">Alerts for incoming messages and calls</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h3 data-key="user-rights-title">Your Rights</h3>
-                    <ul>
-                        <li data-key="user-rights-1">Delete all local data by uninstalling the app</li>
-                        <li data-key="user-rights-2">Control which permissions to grant</li>
-                        <li data-key="user-rights-3">Disable specific features at any time</li>
-                        <li data-key="user-rights-4">Export or backup your data locally</li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <h3 data-key="children-privacy-title">Children's Privacy</h3>
-                    <p data-key="children-privacy-desc">VoiceLink is designed for general audiences. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information, please contact us to remove it.</p>
-                </section>
-
-                <section class="section">
-                    <h3 data-key="policy-changes-title">Changes to This Policy</h3>
-                    <p data-key="policy-changes-desc">We may update this Privacy Policy periodically. Changes will be posted in the app and on this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
-                </section>
-
-                <section class="section">
-                    <h3 data-key="contact-title">Contact Us</h3>
-                    <p data-key="contact-desc">If you have questions about this Privacy Policy or our data practices, please contact us:</p>
-                    <div class="contact-info">
-                        <p><strong data-key="email-label">Email:</strong> <a href="mailto:voicelinkassist@gmail.com">voicelinkassist@gmail.com</a></p>
-                        <p><strong data-key="app-label">App:</strong> VoiceLink Settings > Privacy & Security</p>
-                    </div>
-                </section>
+            <div class="info-box">
+                <p><strong>No Internet Required After Activation:</strong> Once activated, the app works completely offline. Your conversations never leave your local WiFi network.</p>
             </div>
-        </main>
 
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2026 VoiceLink. <span data-key="footer-rights">All rights reserved.</span></p>
-                <p data-key="footer-desc">Secure voice communication for everyone.</p>
+            <h2>3. Data Storage and Security</h2>
+            
+            <h3>3.1 Server Storage</h3>
+            <ul>
+                <li>Activation data is stored on secure servers with encryption</li>
+                <li>Data is retained only for license verification purposes</li>
+                <li>We use industry-standard security measures to protect your data</li>
+            </ul>
+
+            <h3>3.2 Local Storage</h3>
+            <ul>
+                <li>Chat messages are stored locally on your device only</li>
+                <li>Voice messages are transmitted in real-time and not stored</li>
+                <li>You can clear local data anytime from your device settings</li>
+            </ul>
+
+            <h2>4. Data Sharing</h2>
+            <div class="warning-box">
+                <p><strong>We DO NOT share, sell, or rent your information to third parties.</strong></p>
             </div>
-        </footer>
+            <p>Your activation data is:</p>
+            <ul>
+                <li>✅ Never shared with advertisers</li>
+                <li>✅ Never sold to data brokers</li>
+                <li>✅ Never used for marketing purposes</li>
+                <li>✅ Only accessible to our technical team for support</li>
+            </ul>
+
+            <h2>5. Your Privacy Rights</h2>
+            
+            <h3>5.1 Access Your Data</h3>
+            <p>You can request a copy of the activation data we have stored by contacting us at: <a href="mailto:voicelinkassist@gmail.com">voicelinkassist@gmail.com</a></p>
+
+            <h3>5.2 Delete Your Data</h3>
+            <div class="highlight-box">
+                <p><strong>To delete the Device ID and phone information we collected for activation:</strong></p>
+                <p>Simply lock the speaker feature by tapping the <strong>"Lock Speaker Feature"</strong> button on the main screen. This will permanently remove all your data from our servers.</p>
+            </div>
+
+            <h3>5.3 Control App Permissions</h3>
+            <p>You can manage app permissions from your phone settings:</p>
+            <ul>
+                <li><strong>Microphone:</strong> Required for voice communication</li>
+                <li><strong>Storage:</strong> Required to save chat messages locally</li>
+                <li><strong>Network:</strong> Required for local WiFi communication</li>
+            </ul>
+
+            <h2>6. Children's Privacy</h2>
+            <p>VoiceLink is not intended for children under 13. We do not knowingly collect information from children. If you believe a child has provided us with information, please contact us immediately.</p>
+
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time. We will notify you of any changes by:</p>
+            <ul>
+                <li>Posting the new policy on this page</li>
+                <li>Updating the "Last Updated" date</li>
+                <li>Showing a notification in the app (for major changes)</li>
+            </ul>
+
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <div class="info-box">
+                <p><strong>Email:</strong> <a href="mailto:voicelinkassist@gmail.com">voicelinkassist@gmail.com</a></p>
+                <p><strong>App Name:</strong> VoiceLink - Offline Walkie Talkie</p>
+                <p><strong>Developer:</strong> BinAref Team</p>
+            </div>
+
+            <h2>9. Your Consent</h2>
+            <p>By using VoiceLink, you consent to this Privacy Policy and agree to its terms.</p>
+
+            <div class="highlight-box">
+                <p><strong>Remember:</strong> VoiceLink is designed for privacy. Your conversations stay on your local network and are never sent to the internet or stored on external servers.</p>
+            </div>
+        </div>
+
+        <!-- Arabic Content -->
+        <div id="content-ar" class="content" dir="rtl">
+            <h2>سياسة الخصوصية</h2>
+            <p class="date">آخر تحديث: يناير 2026</p>
+
+            <div class="highlight-box">
+                <p><strong>مهم:</strong> تم تصميم VoiceLink مع مراعاة الخصوصية. جميع الاتصالات الصوتية والنصية تبقى على شبكة WiFi المحلية ولا يتم نقلها عبر الإنترنت أبداً.</p>
+            </div>
+
+            <h2>1. المعلومات التي نجمعها</h2>
+            
+            <h3>1.1 المعلومات المجمعة للتفعيل (مرة واحدة فقط)</h3>
+            <p>عند تفعيل التطبيق لأول مرة، نجمع:</p>
+            <ul>
+                <li><strong>معرف الجهاز:</strong> معرف فريد لجهازك</li>
+                <li><strong>طراز الهاتف:</strong> طراز جهازك والشركة المصنعة</li>
+                <li><strong>إصدار Android:</strong> إصدار نظام التشغيل</li>
+                <li><strong>كود التفعيل:</strong> كود التفعيل المشترى</li>
+            </ul>
+            <p><strong>الغرض:</strong> تُستخدم هذه المعلومات فقط للتحقق من تفعيلك ومنع الاستخدام غير المصرح به.</p>
+
+            <h3>1.2 المعلومات التي لا نجمعها</h3>
+            <p>نحن لا نجمع:</p>
+            <ul>
+                <li>❌ الرسائل الصوتية أو التسجيلات</li>
+                <li>❌ الرسائل النصية أو سجل المحادثات</li>
+                <li>❌ معلومات الاتصال</li>
+                <li>❌ بيانات الموقع</li>
+                <li>❌ المعلومات الشخصية (الاسم، البريد الإلكتروني، رقم الهاتف)</li>
+                <li>❌ أنماط الاستخدام أو التحليلات</li>
+                <li>❌ أي بيانات من اتصالات شبكتك المحلية</li>
+            </ul>
+
+            <h2>2. كيف نستخدم معلوماتك</h2>
+            <p>المعلومات المحدودة التي نجمعها تُستخدم فقط لـ:</p>
+            <ol>
+                <li><strong>التحقق من التفعيل:</strong> لتأكيد أن جهازك مفعّل بشكل صحيح</li>
+                <li><strong>إدارة الترخيص:</strong> لمنع التفعيلات المتعددة بنفس الكود</li>
+                <li><strong>الدعم الفني:</strong> لمساعدتك إذا واجهت مشاكل في التفعيل</li>
+            </ol>
+
+            <div class="info-box">
+                <p><strong>لا حاجة للإنترنت بعد التفعيل:</strong> بمجرد التفعيل، يعمل التطبيق بدون إنترنت تماماً. محادثاتك لا تغادر شبكة WiFi المحلية أبداً.</p>
+            </div>
+
+            <h2>3. تخزين البيانات والأمان</h2>
+            
+            <h3>3.1 التخزين على الخادم</h3>
+            <ul>
+                <li>يتم تخزين بيانات التفعيل على خوادم آمنة مع التشفير</li>
+                <li>يتم الاحتفاظ بالبيانات فقط لأغراض التحقق من الترخيص</li>
+                <li>نستخدم إجراءات أمان معيارية لحماية بياناتك</li>
+            </ul>
+
+            <h3>3.2 التخزين المحلي</h3>
+            <ul>
+                <li>يتم تخزين رسائل الدردشة محلياً على جهازك فقط</li>
+                <li>يتم نقل الرسائل الصوتية في الوقت الفعلي ولا يتم تخزينها</li>
+                <li>يمكنك مسح البيانات المحلية في أي وقت من إعدادات جهازك</li>
+            </ul>
+
+            <h2>4. مشاركة البيانات</h2>
+            <div class="warning-box">
+                <p><strong>نحن لا نشارك أو نبيع أو نؤجر معلوماتك لأطراف ثالثة.</strong></p>
+            </div>
+            <p>بيانات التفعيل الخاصة بك:</p>
+            <ul>
+                <li>✅ لا تُشارك أبداً مع المعلنين</li>
+                <li>✅ لا تُباع أبداً لوسطاء البيانات</li>
+                <li>✅ لا تُستخدم أبداً لأغراض تسويقية</li>
+                <li>✅ يمكن الوصول إليها فقط من قبل فريقنا الفني للدعم</li>
+            </ul>
+
+            <h2>5. حقوق الخصوصية الخاصة بك</h2>
+            
+            <h3>5.1 الوصول إلى بياناتك</h3>
+            <p>يمكنك طلب نسخة من بيانات التفعيل المخزنة لدينا بالاتصال بنا على: <a href="mailto:voicelinkassist@gmail.com">voicelinkassist@gmail.com</a></p>
+
+            <h3>5.2 حذف بياناتك</h3>
+            <div class="highlight-box">
+                <p><strong>لحذف معرف الجهاز ومعلومات الهاتف التي جمعناها للتفعيل:</strong></p>
+                <p>ببساطة قم بقفل ميزة المتحدث بالنقر على زر <strong>"قفل ميزة المتحدث"</strong> في الشاشة الرئيسية. سيؤدي هذا إلى إزالة جميع بياناتك من خوادمنا بشكل دائم.</p>
+            </div>
+
+            <h3>5.3 التحكم في أذونات التطبيق</h3>
+            <p>يمكنك إدارة أذونات التطبيق من إعدادات هاتفك:</p>
+            <ul>
+                <li><strong>الميكروفون:</strong> مطلوب للاتصال الصوتي</li>
+                <li><strong>التخزين:</strong> مطلوب لحفظ رسائل الدردشة محلياً</li>
+                <li><strong>الشبكة:</strong> مطلوب للاتصال عبر WiFi المحلي</li>
+            </ul>
+
+            <h2>6. خصوصية الأطفال</h2>
+            <p>VoiceLink غير مخصص للأطفال دون سن 13 عاماً. نحن لا نجمع معلومات من الأطفال عن قصد. إذا كنت تعتقد أن طفلاً قدم لنا معلومات، يرجى الاتصال بنا فوراً.</p>
+
+            <h2>7. التغييرات على هذه السياسة</h2>
+            <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات عن طريق:</p>
+            <ul>
+                <li>نشر السياسة الجديدة على هذه الصفحة</li>
+                <li>تحديث تاريخ "آخر تحديث"</li>
+                <li>عرض إشعار في التطبيق (للتغييرات الرئيسية)</li>
+            </ul>
+
+            <h2>8. اتصل بنا</h2>
+            <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا:</p>
+            <div class="info-box">
+                <p><strong>البريد الإلكتروني:</strong> <a href="mailto:voicelinkassist@gmail.com">voicelinkassist@gmail.com</a></p>
+                <p><strong>اسم التطبيق:</strong> VoiceLink - Offline Walkie Talkie</p>
+                <p><strong>المطور:</strong> BinAref Team</p>
+            </div>
+
+            <h2>9. موافقتك</h2>
+            <p>باستخدام VoiceLink، فإنك توافق على سياسة الخصوصية هذه وتوافق على شروطها.</p>
+
+            <div class="highlight-box">
+                <p><strong>تذكر:</strong> تم تصميم VoiceLink للخصوصية. محادثاتك تبقى على شبكتك المحلية ولا يتم إرسالها إلى الإنترنت أو تخزينها على خوادم خارجية أبداً.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p id="footer-copyright">&copy; 2026 BinAref Team. All rights reserved.</p>
+            <p>VoiceLink - Offline Walkie Talkie</p>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected content
+            document.getElementById('content-' + lang).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+
+            // Change HTML direction for RTL
+            if (lang === 'ar') {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+                // Update footer text to Arabic
+                document.getElementById('footer-copyright').textContent = '© 2026 BinAref Team. جميع الحقوق محفوظة.';
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+                // Update footer text to English
+                document.getElementById('footer-copyright').textContent = '© 2026 BinAref Team. All rights reserved.';
+            }
+        }
+    </script>
 </body>
 </html>
